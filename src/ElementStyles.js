@@ -8,7 +8,7 @@ export const Container = styled.div`
   justify-content: baseline;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   font-size: 1.6rem;
 `;
 export const OriginalButton = styled.a`
@@ -109,5 +109,195 @@ export const Button3 = styled(OriginalButton)`
     transition: 1s;
     /* make the pseudo element dissapear by rotateX */
     transform: rotateY(90deg);
+  }
+`;
+
+export const Button4 = styled(OriginalButton)`
+  color: #e1332d;
+  border: 4px solid #e1332d;
+
+  &:hover {
+    letter-spacing: 10px;
+    border: 4px solid #e1332d;
+    font-weight: bolder;
+  }
+`;
+
+export const Button5 = styled(OriginalButton)`
+  background: #262626;
+  color: #fff;
+
+  &:hover:before {
+    transform: translateY(0);
+  }
+
+  &:before {
+    content: "hell yeah!";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e1332d;
+    /* z-index: -1; */
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    transform: translateY(-100%);
+  }
+`;
+
+export const Button6 = styled(OriginalButton)`
+  color: #fff;
+  background: #262626;
+
+  &:hover {
+    background: #f44336;
+  }
+  &:hover:before {
+    transform: translateX(100%) rotate(45deg);
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 20px;
+    background: #fff;
+    transform: translateX(-100%) rotate(45deg);
+    transition: transform 0.5s;
+  }
+`;
+
+export const Button7 = styled(OriginalButton)`
+  background: #262626;
+  /* color: #fff; */
+  &:hover:before {
+    transform: translate(100%, -100%);
+  }
+  &:hover:after {
+    transform: translateX(0);
+  }
+
+  &:before {
+    content: "Before";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff165;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:after {
+    content: "After";
+    transform: translate(-100%, 100%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff165;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+export const Button8 = styled(OriginalButton)`
+  &:hover:before {
+    transform: scale(1);
+    opacity: 1;
+  }
+  &:before {
+    content: "Before";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #262626;
+    color: #fff;
+    transform: scale(3);
+    opacity: 0;
+    transition: all 0.6s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+export const Button9 = styled(OriginalButton)`
+  border: 2px solid tomato;
+  color: tomato;
+  &:hover {
+    color: #fff;
+  }
+  &:hover:before {
+    height: 200%;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: tomato;
+    color: #fff;
+    transition: all 0.6s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    border-radius: 0 0 50% 50%;
+  }
+`;
+export const Button10 = styled(OriginalButton)`
+  background: #f1c40f;
+  color: #fff;
+  letter-spacing: 2px;
+  &:hover:before,
+  &:hover:after {
+    transform: rotateX(0);
+  }
+
+  &:before {
+    content: "Before";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2ce771;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotateX(270deg);
+    transform-origin: top;
+    transition: all 0.5s;
+  }
+  &:after {
+    content: "After";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotateX(270deg);
+    transform-origin: bottom;
+    transition: all 0.5s;
+    transition-delay: 0.25s;
   }
 `;
