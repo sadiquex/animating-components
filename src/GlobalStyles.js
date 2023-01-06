@@ -42,7 +42,7 @@ html {
 }
 body {
 	line-height: 1;
-	font-family: 'Quicksand';
+	font-family: 'Ubuntu';
 	font-size: 62.5%;
 
 }

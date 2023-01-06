@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
+  // width: 100vw;
+  // height: 100vh;
+  gap: 10px;
   margin: 0 auto;
   display: flex;
-  justify-content: baseline;
-  align-items: flex-start;
+  // justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
   font-size: 1.6rem;
+  border: 2px solid red;
 `;
 export const OriginalButton = styled.a`
   padding: 3rem 8rem;
@@ -21,6 +22,8 @@ export const OriginalButton = styled.a`
   position: relative;
   transition: all 0.6s;
   overflow: hidden;
+  cursor: pointer;
+
 `;
 
 export const Button1 = styled(OriginalButton)`
@@ -301,3 +304,94 @@ export const Button10 = styled(OriginalButton)`
     transition-delay: 0.25s;
   }
 `;
+
+export const Button11 = styled(OriginalButton)`
+text-transform: uppercase;
+position: relative;
+// color: transparent;
+color: #fff;
+// overflow: visible;
+
+&:before {
+  content: "before";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #262626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s;
+}
+
+&:hover:before {
+  left: 100%;
+  transform: scale(0) rotateY(360deg);
+  opacity: 0;
+  
+}
+&:after {
+  content: "after";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #262626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s;
+}
+
+&:hover:after {
+  left: 0;
+  // transform: scale(0) rotateY(360deg);
+  opacity: 1;
+  
+}
+
+`
+export const Button12 = styled(OriginalButton)`
+overflow: visible;
+
+
+  text-decoration: none;
+  text-align:center;
+  color: #000;
+  transition: all .5s;
+  position:relative;
+
+  &:before,&:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    background: #ff0;
+    transform: translateY(-50%);
+    transition: all .3s;
+  }
+  &:before {
+    left: 0;
+    box-shadow: -100px 0 0 green;
+  }
+  &:after {
+    right: 0;
+    box-shadow: 100px 0 0 blue;
+
+  }
+
+  &:hover:before {
+    left:50%;
+    box-shadow: 30px 0 0 green;
+  }
+
+  &:hover:after {
+    right:50%;
+    box-shadow: -30px 0 0 blue;
+  }
+`
