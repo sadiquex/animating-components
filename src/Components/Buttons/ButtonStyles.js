@@ -355,7 +355,8 @@ color: #fff;
 
 `
 export const Button12 = styled(OriginalButton)`
-overflow: visible;
+/* overflow: visible; */
+border: none;
 
 
   text-decoration: none;
@@ -374,24 +375,70 @@ overflow: visible;
     background: #ff0;
     transform: translateY(-50%);
     transition: all .3s;
+    z-index: -1000;
   }
   &:before {
     left: 0;
-    box-shadow: -100px 0 0 green;
+    box-shadow: -100px 0 0 #ff0;
   }
   &:after {
     right: 0;
-    box-shadow: 100px 0 0 blue;
+    box-shadow: 100px 0 0 #ff0;
 
   }
 
   &:hover:before {
     left:50%;
-    box-shadow: 30px 0 0 green;
+    box-shadow: 30px 0 0 #ff0;
+    /* transform: translate(-50%,-50%); */
+    transform: translateX(-50%) translateY(-50%);
   }
 
   &:hover:after {
     right:50%;
-    box-shadow: -30px 0 0 blue;
+    box-shadow: -30px 0 0 #ff0;
+    /* transform: translate(-50%,-50%); */
+    transform: translateX(-50%) translateY(-50%);
   }
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    transform: scale(0);
+    transition: all .3s;
+    z-index: -1;
+  }
+  &:hover span {
+    transform: scale(1);
+    transition-delay: .4s;
+  }
+  &:hover {
+    color: #262626;
+
+  }
+`
+
+export const Button13 = styled(OriginalButton)`
+transition: all .3s;
+
+&:hover {
+  border: 2px solid #f44336;
+  color: #f44336;
+  animation: shake .3s linear infinite;
+}
+
+@keyframes shake {
+  33% {transform: rotate(6deg)}
+  66% {transform: rotate(-6deg)}
+  100% {transform: rotate(6deg)}
+  
+} 
+
 `

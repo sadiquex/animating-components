@@ -1,8 +1,8 @@
 import { createElement as $ } from "react";
-import { Text1, Text2 } from "./TextStyles";
+import { Container, Text1, Text2, Text3 } from "./TextStyles";
 
 const Texts = () => {
-  return $("div", null, $(Text1, null, $("h1", null, "Text")), $(Text2, null, $("h1", null, "Mayak T & C")));
+  return $(Container, null, $(Text1, null, $("h1", null, "Text")), $(Text2, null, $("h1", null, "Mayak T & C")), $(Text3, null, $("ul", null, $("li", null, "M"), $("li", null, "A"), $("li", null, "Y"), $("li", null, "A"), $("li", null, "K"),)));
 };
 
 export default Texts;

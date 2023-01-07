@@ -13,6 +13,7 @@ import {
   Button10,
   Button11,
   Button12,
+  Button13,
 } from "./ButtonStyles";
 
 const Buttons = () => {
@@ -22,18 +23,22 @@ const Buttons = () => {
     $(
       Container,
       null,
-      $(Button1, null, $("div", null, "Button 1")),
-      $(Button2, null, $("div", null, "Button 2")),
-      $(Button3, null, $("div", null, "Button 3")),
-      $(Button4, null, $("div", null, "Button 4")),
-      $(Button5, null, $("div", null, "Button 5")),
-      $(Button6, null, $("div", null, "Button 6")),
-      $(Button7, null, $("div", null, "Button 7")),
-      $(Button8, null, $("div", null, "Button 8")),
-      $(Button9, null, $("div", null, "Button 9")),
-      $(Button10, null, $("div", null, "Button 10")),
-      $(Button11, null, $("div", null, "Button 11")),
-      $(Button12, null, $("a", { href: "#" }, $("span", null, "Button 12"))),
+      // buttons are "a" elements
+      $(Button1, null, "Button 1"),
+      $(Button2, null, "Button 2"),
+      $(Button3, null, "Button 3"),
+      $(Button4, null, "Button 4"),
+      $(Button5, null, "Button 5"),
+      $(Button6, null, "Button 6"),
+      $(Button7, null, "Button 7"),
+      $(Button8, null, "Button 8"),
+      $(Button9, null, "Button 9"),
+      $(Button10, null, "Button 10"),
+      $(Button11, null, "Button 11"),
+      $(Button12, null, $("div", null, $("a", { href: "#" }, $("span", null, "Button 12")))),
+      $(Button13, null, "Button 13"),
+
+
     )
   );
 };
