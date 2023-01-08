@@ -442,3 +442,224 @@ transition: all .3s;
 } 
 
 `
+export const Button14 = styled(OriginalButton)`
+letter-spacing: 2px;
+transition: all .3s;
+position: relative;
+border: none;
+color: #fff;
+
+&:before {
+  content: "";
+  position: absolute;
+  top:-3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  background: #20caff;
+  z-index: -1;
+  /* blending mode, just as in photoshop */
+  mix-blend-mode: multiply;
+  transition: all .2s;
+  transform-origin: top;
+}
+&:after {
+  content: "";
+  position: absolute;
+  top:3px;
+  left: 3px;
+  width: 100%;
+  height: 100%;
+  background: #ff7675;
+  z-index: -1;
+  transition: all .2s;
+transform-origin:bottom;
+  mix-blend-mode: multiply;
+  
+}
+/* change link color */
+&:hover {
+  color: #272727;
+}
+
+&:hover:before {
+  /* rotate in a 3d perspective */
+transform: perspective(1000px) rotateX(75deg);
+top: -6px;
+left: 0;
+}
+&:hover:after {
+  /* rotate in a 3d perspective */
+transform: perspective(1000px) rotateX(-75deg);
+top: 6px;
+left: 0;
+}
+`
+
+// !!!!!!!!!!!!!!!!!!!!!1
+export const Button15 = styled(OriginalButton)`
+color: #f6b93b;
+border: 3px solid #f6b93b;
+transition: all .5s;
+position: relative;
+
+&:before,&:after,span:before,span:after{
+  content:"";
+  position: absolute;
+  /* because there are 4 elements sharing the full width */
+  width:25%;
+  height:100%;
+  background: #f6b93b;
+  z-index:-1;
+  transition: all .5s;
+}
+&:before {
+  top: 0;
+  left: -25%;
+}
+/* changes to happen when we hover over the link */
+&:hover:before {
+  top:0;
+  left: 0;
+}
+/* after element sits at the top */
+&:after {
+  top: -100%;
+  left: 25%;
+}
+&:hover:after {
+  top: 0;
+  left:25%;
+  }
+span:before {
+  top: 100%;
+  right: 25%;
+}
+&:hover span:before {
+  top: 0;
+  right: 25%;
+}
+span:after {
+  top: 0;
+  right: -25%;
+}
+&:hover span:after {
+  right: 0;
+}
+/* change text color */
+&:hover {
+  color: #222;
+}
+  
+`
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+export const Button16 = styled(OriginalButton)`
+color: orangered;
+border: 5px solid orangered;
+transition: all .2s;
+position: relative;
+
+&:before,&:after,span:before,span:after{
+  content:"";
+  position: absolute;
+  /* because there are 4 elements sharing the full width */
+  width:25%;
+  height:100%;
+  background: orangered;
+  z-index:-1;
+  transition: all .2s;
+}
+/* first part */
+&:before {
+  content: "before";
+  top: 100%;
+  left: 0;
+}
+/* changes to happen when we hover over the link */
+&:hover:before {
+  top:0;
+  left: 0;
+}
+/* second part */
+&:after {
+  content:"after";
+  top: -100%;
+  left: 25%;
+  transition-delay: .1s;
+}
+&:hover:after {
+  top: 0;
+  left:25%;
+  }
+  /* third part */
+span:before {
+  content:"span before";
+  top: 100%;
+  right: 25%;
+  transition-delay: .2s;
+
+}
+&:hover span:before {
+  top: 0;
+  right: 25%;
+}
+/* fourth part */
+span:after {
+  content:"span after";
+  top: -100%;
+  right: 0%;
+  transition-delay: .3s;
+
+}
+&:hover span:after {
+  right: 0;
+  top: 0;
+}
+/* change text color */
+&:hover {
+  color: #fff;
+}
+  
+`
+export const Button17 = styled(OriginalButton)`
+position: relative;
+overflow: visible;
+
+&:before {
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  z-index: -1;
+  opacity:0;
+  transition: all .4s;
+}
+&:hover:before {
+  opacity: 1;
+  transform: rotate(15deg);
+}
+&:hover {
+  color: #fff;
+}
+
+span {
+  color: transparent;
+  position: relative;
+}
+span:before {
+  content: "B";
+  position: absolute;
+  color: #000;
+  opacity: 1;
+  transition: all .2s;
+}
+&:hover span:before {
+  color: #fff;
+  font-size: 80px;
+  transform: rotate(360deg) translate(-65%,-10%);
+}
+`

@@ -14,6 +14,10 @@ import {
   Button11,
   Button12,
   Button13,
+  Button14,
+  Button15,
+  Button16,
+  Button17,
 } from "./ButtonStyles";
 
 const Buttons = () => {
@@ -37,6 +41,10 @@ const Buttons = () => {
       $(Button11, null, "Button 11"),
       $(Button12, null, $("div", null, $("a", { href: "#" }, $("span", null, "Button 12")))),
       $(Button13, null, "Button 13"),
+      $(Button14, null, "Button 14"),
+      $(Button15, null, $("span", null, "Button 15")),
+      $(Button16, null, $("span", null, "Button 16")),
+      $(Button17, null, $("span", null, "B"), $("a", null, "utton")),
 
 
     )
