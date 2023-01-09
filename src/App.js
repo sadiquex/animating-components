@@ -1,11 +1,14 @@
 import Elements from "./Elements";
+import Navbar from "./Components/Navbar/Navbar";
+import { createElement as $ } from "react";
+import styled from "styled-components";
 
 function App() {
-  return (
-    <div className="App">
-      <Elements />
-    </div>
-  );
+  return $(Container, { className: "App" }, $(Navbar), $(Elements));
 }
 
 export default App;
+
+const Container = styled.div`
+  display: flex;
+`;

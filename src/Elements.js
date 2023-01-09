@@ -8,7 +8,15 @@ import Cards from "./Components/Cards/Cards";
 import Loaders from "./Components/Loaders/Loaders";
 
 const Elements = () => {
-  return $(ElementsContainer, null, $(Buttons), $(Menus), $(Cards), $(Loaders), $(Texts));
+  return $(
+    ElementsContainer,
+    null,
+    $(Buttons),
+    $(Menus),
+    $(Cards),
+    $(Loaders),
+    $(Texts)
+  );
 };
 
 export default Elements;

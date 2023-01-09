@@ -138,54 +138,52 @@ export const Menu3 = styled(OriginalMenu)`
   background: #262626;
   font-size: 7rem;
 
-ul {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-}
-li {
-  display: block;
-}
-a {
-  position: relative;
-  display: block;
-  text-decoration: none;
-  -webkit-text-stroke: .4px #fff;
-  font-weight: bolder;
-  color: transparent;
-  text-transform: lowercase;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  li {
+    display: block;
+  }
+  a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    -webkit-text-stroke: 0.4px #fff;
+    font-weight: bolder;
+    color: transparent;
+    text-transform: lowercase;
 
-  /* red layer */
-  &:before,&::after {
-    content: attr(data);
-    position: absolute;
-    left: 0;
-    top: 0;
-    transition: .5s;
-  }
+    /* red layer */
+    &:before,
+    &::after {
+      content: attr(data);
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: 0.5s;
+    }
 
-  &:hover:before {
-    color: rgb(187,0,0)
-    ;z-index: 1;
-    -webkit-text-stroke:.4px transparent;
-    transform: translate(10px,-10px);
+    &:hover:before {
+      color: rgb(187, 0, 0);
+      z-index: 1;
+      -webkit-text-stroke: 0.4px transparent;
+      transform: translate(10px, -10px);
+    }
+    &:hover:after {
+      color: rgb(119, 239, 255);
+      z-index: 1;
+      -webkit-text-stroke: 0.4px transparent;
+      transform: translate(15px, -15px);
+    }
+    /* when we hover the link */
+    &:hover {
+      color: #fff;
+      -webkit-text-stroke: none;
+      transition: 0.5s;
+    }
   }
-  &:hover:after {
-    color: rgb(119,239,255)
-    ;z-index: 1;
-    -webkit-text-stroke:.4px transparent;
-    transform: translate(15px,-15px);
-  }
-  /* when we hover the link */
-  &:hover {
-    color: #fff;
-    -webkit-text-stroke: none;
-    transition: .5s;
-  }
-  
-}
-`
-export const Menu4 = styled(OriginalMenu)`
-
-`
+`;
+export const Menu4 = styled(OriginalMenu)``;

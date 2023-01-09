@@ -45,6 +45,16 @@ body {
 	font-family: 'Ubuntu';
 	font-size: 62.5%;
 
+	::-webkit-scrollbar {
+    width: 1rem;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }
+
 }
 ol, ul {
 	list-style: none;

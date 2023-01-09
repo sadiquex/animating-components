@@ -2,12 +2,44 @@ import { createElement as $ } from "react";
 import { Container, Card1, Card2 } from "./CardsStyles";
 
 const Cards = () => {
-    return $(Container, null, $(Card1, null, $("div", { className: "content" }, ("h2", null, "Card 1"), $("p", null, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur sed quo omnis nemo in! Consectetur nulla vel error numquam voluptates?"), $("a", { href: "#" }, "Read More"))),
+  return $(
+    Container,
+    null,
+    $(
+      Card1,
+      null,
+      $(
+        "div",
+        { className: "content" },
+        ("h2", null, "Card 1"),
+        $(
+          "p",
+          null,
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur sed quo omnis nemo in! Consectetur nulla vel error numquam voluptates?"
+        ),
+        $("a", { href: "#" }, "Read More")
+      )
+    ),
 
-        $(Card2, null, $("div", { className: "card" }, $("div", { className: "imgbox" }, $("img", { src: './image.png', alt: "the image" })), $("div", { className: "details" }, $("h2", null, "Your Name", $("br"), $("span", null, "title")))))
-
+    $(
+      Card2,
+      null,
+      $(
+        "div",
+        { className: "card" },
+        $(
+          "div",
+          { className: "imgbox" },
+          $("img", { src: "./image.png", alt: "the image" })
+        ),
+        $(
+          "div",
+          { className: "details" },
+          $("h2", null, "Your Name", $("br"), $("span", null, "title"))
+        )
+      )
     )
-}
-
+  );
+};
 
 export default Cards;
