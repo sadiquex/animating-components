@@ -1,16 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  // width: 100vw;
-  // height: 100vh;
-  gap: 10px;
-  margin: 0 auto;
   display: flex;
-  // justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 1.6rem;
   border: 2px solid red;
+  gap: 20px;
 `;
 export const OriginalButton = styled.a`
   padding: 3rem 8rem;
@@ -621,28 +617,41 @@ export const Button16 = styled(OriginalButton)`
     color: #fff;
   }
 `;
-export const Button17 = styled(OriginalButton)`
+export const Button17 = styled.div`
+  padding: 3rem 8rem;
+  cursor: pointer;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.6s;
+  overflow: hidden;
+  cursor: pointer;
+
   position: relative;
   overflow: visible;
 
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: #000;
-    z-index: -1;
-    opacity: 0;
-    transition: all 0.4s;
-  }
-  &:hover:before {
-    opacity: 1;
-    transform: rotate(15deg);
-  }
-  &:hover {
-    color: #fff;
+  a {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: #000;
+      z-index: -1;
+      opacity: 0;
+      transition: all 0.4s;
+    }
+    &:hover:before {
+      opacity: 1;
+      transform: rotate(15deg);
+    }
+    &:hover {
+      color: #fff;
+    }
   }
 
   span {

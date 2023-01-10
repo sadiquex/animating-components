@@ -1,36 +1,56 @@
 import { createElement as $ } from "react";
-import Elements from "./Elements";
-// import Navbar from "./Components/Navbar/Navbar";
+import Components from "./Components";
+import Navbar from "./Components/Navbar/Navbar";
+import { Link } from "react-router-dom";
 import Sidebar from "./Components/Navbar/Sidebar";
 import styled from "styled-components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Home";
-import Reports from "./Components/Reports";
+import { useState } from "react";
+import * as FaIcons from "react-icons/fa";
 
 function App() {
+  const [sidebar, setSidebar] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebar(!sidebar);
+  };
+
+  const hideSidebar = () => {
+    setSidebar(false);
+  };
+
   return $(
     Container,
     { className: "App" },
     // $(Navbar),
+
     $(
       Router,
       null,
-      $(Sidebar),
-      // switch is the Routes
       $(
-        Routes,
-        null,
-        $(Route, { path: "/home", element: $(Home), exact: true }),
-        $(Route, { path: "/reports", element: $(Reports), exact: true })
-      )
+        Link,
+        { to: "#", className: "open-bars" },
+        $(FaIcons.FaBars, { onClick: () => toggleSidebar() })
+      ),
+      $(Sidebar, { sidebar, toggleSidebar })
     ),
-    $(Elements)
+    $(Components, { hideSidebar })
   );
 }
 
 export default App;
 
 const Container = styled.div`
-  display: flex;
-  gap: 20px;
+  /* open bars */
+  position: relative;
+  .open-bars {
+    font-size: 2rem;
+    position: fixed;
+    left: 30px;
+    top: 30px;
+    z-index: 10;
+    cursor: pointer;
+    padding: 20px;
+    /* background: red; */
+  }
 `;

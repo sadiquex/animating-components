@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   .navbar {
-    width: 80px;
+    /* width: 80px; */
     height: 100vh;
     position: fixed;
-    background: var(--bg-primary);
     background: #002a32;
     transition: all 0.3s;
     display: flex;
@@ -83,6 +82,9 @@ export const Container = styled.div`
       &:hover {
         width: 100%;
       }
+    }
+    .nav-menu {
+      background: red;
     }
     .navbar-nav {
       flex-direction: row;

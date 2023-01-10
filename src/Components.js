@@ -1,5 +1,5 @@
 import { createElement as $ } from "react";
-import { ElementsContainer } from "./ElementStyles";
+import { ComponentsContainer } from "./ComponentsStyles";
 // different component files
 import Buttons from "./Components/Buttons/Buttons";
 import Menus from "./Components/Menus/Menus";
@@ -8,10 +8,10 @@ import Cards from "./Components/Cards/Cards";
 import Loaders from "./Components/Loaders/Loaders";
 import Images from "./Components/Images/Images";
 
-const Elements = () => {
+const Components = ({ hideSidebar }) => {
   return $(
-    ElementsContainer,
-    null,
+    ComponentsContainer,
+    { onClick: () => hideSidebar() },
     $(Buttons),
     $(Menus),
     $(Cards),
@@ -21,4 +21,4 @@ const Elements = () => {
   );
 };
 
-export default Elements;
+export default Components;

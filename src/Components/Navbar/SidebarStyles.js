@@ -2,26 +2,19 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   font-size: 20px;
-  margin-right: 20px;
-  z-index: 100000;
-
-  .navbar {
-    width: 80px;
-    /* height: 100vh; */
-    /* background: #002a32; */
-    display: flex;
-    justify-content: center;
-    z-index: 1000;
-    background: red;
-    position: fixed;
-  }
+  position: relative;
   .menu-bars {
+    /* z-index: 9000; */
+    color: #fff;
+    padding: 30px;
+    position: sticky;
   }
   .nav-menu {
     background: #002a32;
     width: 250px;
     height: 100vh;
     display: flex;
+    z-index: 999;
     justify-content: center;
     position: fixed;
     top: 0;
@@ -72,6 +65,23 @@ export const Container = styled.div`
   }
 
   span {
-    margin-left: 16px;
+    /* margin-left: 16px; */
+  }
+
+  @media only screen and (max-width: 600px) {
+    .nav-menu {
+      background: red;
+      height: 60%;
+    }
+  }
+  /* close bars */
+  .close-bars {
+    font-size: 2rem;
+    position: fixed;
+    left: 50px;
+    top: 50px;
+    cursor: pointer;
+    padding: 20px;
+    /* display: {side} */
   }
 `;

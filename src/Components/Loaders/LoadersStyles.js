@@ -9,6 +9,7 @@ export const Container = styled.div`
   background: #264653;
   gap: 100px;
   padding: 40px;
+  overflow: hidden;
 `;
 
 export const Loader1 = styled.div`

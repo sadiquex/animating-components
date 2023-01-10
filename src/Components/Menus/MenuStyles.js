@@ -5,20 +5,18 @@ export const Heading = styled.p`
 `;
 
 export const Container = styled.div`
-  /* border: 2px solid #000; */
-  /* display: flex; */
+  border: 2px solid blue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   gap: 20px;
 `;
 
 export const OriginalMenu = styled.div`
-  /* height: 60px; */
   padding: 20px 10px;
-  width: 500px;
-  background: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 20px 0;
+  background: red;
 
   ul {
     padding: 0;
