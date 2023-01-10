@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   border: 2px solid red;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
   align-items: center;
   gap: 10px;
 `;
@@ -40,6 +42,7 @@ export const Text1 = styled(OriginalText)`
 
 export const Text2 = styled(OriginalText)`
   h1 {
+    white-space: nowrap;
     // letter-spacing: 15px;
     // text-shadow: 0 1px 0 #efefef,0 2px 0 #efefef,0 3px 0 #efefef,0 4px 0 #efefef,0 30px 5px rgba(0,0,0,.1),
     text-shadow: 0 1px 0 #efefef, 0 30px 5px rgba(0, 0, 0, 0.1);
@@ -108,5 +111,58 @@ export const Text3 = styled.div`
   }
   li:nth-child(5) {
     animation-delay: 0.5s;
+  }
+`;
+
+export const Text4 = styled.div`
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  li {
+    color: #000;
+    transition: all 2s;
+    letter-spacing: 10px;
+    font-size: 50px;
+    font-weight: bolder;
+  }
+  ul:hover li {
+    transform: rotate(45deg) translateY(-200px);
+    opacity: 0;
+    /* smoke effect */
+    filter: blur(20px);
+  }
+  li:nth-child(1) {
+    transition-delay: 0s;
+  }
+  li:nth-child(2) {
+    transition-delay: 0.4s;
+  }
+  li:nth-child(3) {
+    transition-delay: 0.8s;
+  }
+  li:nth-child(4) {
+    transition-delay: 1.2s;
+  }
+  li:nth-child(5) {
+    transition-delay: 1.6s;
+  }
+`;
+export const Text5 = styled.div`
+  font-size: 80px;
+  text-align: center;
+  background: url("https://static.vecteezy.com/system/resources/previews/001/255/901/original/blue-wave-pattern-vector.jpg");
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: textBackground 15s infinite;
+
+  @keyframes textBackground {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 100%;
+    }
   }
 `;

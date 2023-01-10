@@ -11,4 +11,5 @@ export default App;
 
 const Container = styled.div`
   display: flex;
+  gap: 20px;
 `;

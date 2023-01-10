@@ -4,6 +4,7 @@ export const Container = styled.div`
   border: 2px solid red;
   padding: 10px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
 `;
@@ -102,6 +103,7 @@ export const Card2 = styled.div`
       top: 0;
       left: 0;
       height: 100%;
+      width: 100%;
       object-fit: cover;
     }
   }
@@ -127,5 +129,62 @@ export const Card2 = styled.div`
   h2 span {
     font-weight: 500;
     color: #f38695;
+  }
+`;
+export const Card3 = styled(OriginalCard)`
+  .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #000;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 18px;
+  }
+  .content {
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    left: 10%;
+    height: 80px;
+    overflow: hidden;
+    background: #fff;
+    text-align: center;
+    transition: 0.5s;
+  }
+  h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px auto;
+  }
+  p {
+    width: 80%;
+    margin: 10px auto;
+    opacity: 0;
+  }
+  a {
+    text-decoration: none;
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 10px 15px;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .card:hover .content {
+    height: 100%;
+    width: 100%;
+    left: 0%;
+  }
+  .card:hover p,
+  .card:hover a {
+    opacity: 1;
+    transition-delay: 0.1s;
+  }
+  /* image  */
+  .imgbox {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 `;

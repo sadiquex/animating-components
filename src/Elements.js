@@ -6,6 +6,7 @@ import Menus from "./Components/Menus/Menus";
 import Texts from "./Components/Texts/Texts";
 import Cards from "./Components/Cards/Cards";
 import Loaders from "./Components/Loaders/Loaders";
+import Images from "./Components/Images/Images";
 
 const Elements = () => {
   return $(
@@ -15,7 +16,8 @@ const Elements = () => {
     $(Menus),
     $(Cards),
     $(Loaders),
-    $(Texts)
+    $(Texts),
+    $(Images)
   );
 };
 

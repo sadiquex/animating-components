@@ -342,12 +342,14 @@ export const Loader6 = styled.div`
   .s4::before,
   .s5::before,
   .s6::before {
+    margin: 10px;
     animation-delay: 0.1s;
   }
   .s7::before,
   .s8::before,
   .s9::before {
     animation-delay: 0.2s;
+    margin: 20px;
   }
 
   @keyframes loading {
@@ -396,14 +398,15 @@ export const Loader8 = styled.div`
     position: relative;
 
     &:before {
-      content: "";
+      content: "LOADING...";
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       color: #f6b93b;
-      border-right: 2px solid #f6b93b;
-      animation: animate 5s linear infinite;
+      border-right: 4px solid #f6b93b;
+      animation: animate 4s linear infinite;
+      overflow: hidden;
     }
   }
 
@@ -416,6 +419,144 @@ export const Loader8 = styled.div`
     }
     100% {
       width: 0;
+    }
+  }
+`;
+
+export const Loader9 = styled.div`
+  width: 200px;
+  height: 200px;
+  border: 3px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    width: 100px;
+    height: 100px;
+    /* background: red; */
+    position: relative;
+    animation: animateContainer 1s linear infinite;
+    transform: rotate(45deg);
+  }
+  span {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    animation: rotateSquares 1s linear infinite;
+  }
+  span:nth-child(1) {
+    top: 0;
+    left: 0;
+    background: #fceba7;
+  }
+  span:nth-child(2) {
+    top: 0;
+    right: 0;
+    background: #55ddb9;
+  }
+  span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    background: #fb6c64;
+  }
+  span:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    background: #1f78b0;
+  }
+
+  @keyframes animateContainer {
+    0% {
+      width: 100px;
+      height: 100px;
+    }
+    10% {
+      width: 100px;
+      height: 100px;
+    }
+    50% {
+      width: 150px;
+      height: 150px;
+    }
+    90% {
+      width: 100px;
+      height: 100px;
+    }
+    100% {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @keyframes rotateSquares {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(90deg);
+    }
+    90% {
+      transform: rotate(90deg);
+    }
+    100% {
+      transform: rotate(90deg);
+    }
+  }
+`;
+
+export const Loader10 = styled.div`
+  .loader {
+    width: 70px;
+    display: flex;
+    /* gap: 1px; */
+  }
+  span {
+    width: 10px;
+    height: 60px;
+    margin: 0 1px;
+    background: #fff;
+    animation: loading 0.8s ease-in-out infinite;
+  }
+  span:nth-child(1) {
+    background: #2eeca8;
+    animation-delay: 0.2s;
+  }
+  span:nth-child(2) {
+    background: #ffb703;
+    animation-delay: 0.3s;
+  }
+  span:nth-child(3) {
+    background: #ff006e;
+    animation-delay: 0.4s;
+  }
+  span:nth-child(4) {
+    background: #ffd60a;
+    animation-delay: 0.5s;
+  }
+  span:nth-child(5) {
+    background: #219ebc;
+    animation-delay: 0.6s;
+  }
+  span:nth-child(6) {
+    background: #dad7cd;
+    animation-delay: 0.7s;
+  }
+
+  @keyframes loading {
+    /* % of animation duration */
+    0% {
+      transform: scaleY(0.1);
+    }
+    35% {
+      transform: scaleY(1);
+    }
+    60%,
+    100% {
+      transform: scaleY(0.1);
     }
   }
 `;

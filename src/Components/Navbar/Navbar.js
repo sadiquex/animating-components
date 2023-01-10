@@ -1,48 +1,64 @@
-import styled from "styled-components";
 import { createElement as $ } from "react";
+import { Container } from "./NavbarStyles";
 
 const Navbar = () => {
   return $(
     Container,
     null,
-    $("nav", { className: "navbar" }),
     $(
-      "main",
-      null,
-      $("h1", null, "Tech Bubble is bursting"),
+      "nav",
+      { className: "navbar" },
       $(
-        "p",
-        null,
-        " veniam enim aliquam provident ex fuga eos quam facilis. Architecto nisi soluta nobis nulla doloribus temporibus quidem, maxime deleniti eos harum illo, accusamus laudantium ipsum iste, iusto asperiores illum ea aspernatur iure repudiandae? Tenetur sint id et perspiciatis, explicabo voluptate voluptatem asperiores minima dignissimos. Quasi corporis consequatur, recusandae explicabo culpa accusamus. Laborum consectetur provident ipsum quasi laboriosam, quo, est officiis  veniam enim aliquam provident ex fuga eos quam facilis. Architecto nisi soluta nobis nulla doloribus temporibus quidem, maxime deleniti eos harum illo, accusamus laudantium ipsum iste, iusto asperiores illum ea aspernatur iure repudiandae? Tenetur sint id et perspiciatis, explicabo voluptate voluptatem asperiores minima dignissimos. Quasi corporis consequatur, recusandae explicabo culpa accusamus. Laborum consectetur provident ipsum quasi laboriosam, quo, est officiis voluptatem et sequi nihil nemo dignissimos perspiciatis voluptatum blanditiis sapiente, voluptatibus animi voluptas error officia neque. veniam enim aliquam provident ex fuga eos quam facilis. Architecto nisi soluta nobis nulla doloribus temporibus quidem, maxime deleniti eos harum illo, accusamus laudantium ipsum iste, iusto asperiores illum ea aspernatur iure repudiandae? Tenetur sint id et perspiciatis, explicabo voluptate voluptatem asperiores minima dignissimos. Quasi corporis consequatur, recusandae explicabo culpa accusamus. Laborum consectetur provident ipsum quasi laboriosam, quo, est officiis voluptatem et sequi nihil nemo dignissimos perspiciatis voluptatum blanditiis sapiente, voluptatibus animi voluptas error officia neque.voluptatem et sequi nihil nemo dignissimos perspiciatis voluptatum blanditiis sapiente, voluptatibus animi voluptas error officia neque.o"
+        "ul",
+        { className: "navbar-nav" },
+        $(
+          "li",
+          { className: "logo" },
+          $(
+            "a",
+            { className: "nav-link fa-brands fa-space-awesome", href: "#" },
+            $("span", { className: "link-text" }, "Logo")
+          )
+        ),
+        $(
+          "li",
+          { className: "nav-item" },
+          $(
+            "a",
+            { className: "nav-link fa-solid fa-house", href: "#" },
+            $("span", { className: "link-text" }, "Home")
+          )
+        ),
+        $(
+          "li",
+          { className: "nav-item" },
+          $(
+            "a",
+            { className: "nav-link fa-solid fa-house", href: "#" },
+            $("span", { className: "link-text" }, "Home")
+          )
+        ),
+        $(
+          "li",
+          { className: "nav-item" },
+          $(
+            "a",
+            { className: "nav-link fa-solid fa-house", href: "#" },
+            $("span", { className: "link-text" }, "Home")
+          )
+        ),
+        $(
+          "li",
+          { className: "nav-item" },
+          $(
+            "a",
+            { className: "nav-link fa-solid fa-house", href: "#" },
+            $("span", { className: "link-text" }, "Home")
+          )
+        )
       )
     )
   );
 };
 
 export default Navbar;
-
-export const Container = styled.div`
-  :root {
-    font-size: 10px;
-    --text-primary: #b6b6b6;
-    --text-secondary: #ececec;
-    --bg-primary: #23232e;
-    --bg-secondary: #141418;
-  }
-  h1 {
-    font-weight: bolder;
-  }
-  main {
-    margin-left: 80px;
-  }
-
-  .navbar {
-    width: 80px;
-    height: 100vh;
-    position: fixed;
-    background: var(--bg-primary);
-  }
-
-  font-size: 2rem;
-  border: 2px solid red;
-`;

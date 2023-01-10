@@ -10,6 +10,8 @@ import {
   Loader6,
   Loader7,
   Loader8,
+  Loader9,
+  Loader10,
 } from "./LoadersStyles";
 
 const Loaders = () => {
@@ -84,7 +86,33 @@ const Loaders = () => {
       )
     ),
     $(Loader7, null, $("div", { className: "loading" })),
-    $(Loader8, null, $("h1", null, "LOADING ..."))
+    $(Loader8, null, $("h1", null, "LOADING ...")),
+    $(
+      Loader9,
+      null,
+      $(
+        "div",
+        { className: "container" },
+        $("span"),
+        $("span"),
+        $("span"),
+        $("span")
+      )
+    ),
+    $(
+      Loader10,
+      null,
+      $(
+        "div",
+        { className: "loader" },
+        $("span"),
+        $("span"),
+        $("span"),
+        $("span"),
+        $("span"),
+        $("span")
+      )
+    )
   );
 };
 
