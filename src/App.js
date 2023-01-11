@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import { Link } from "react-router-dom";
 import Sidebar from "./Components/Navbar/Sidebar";
 import styled from "styled-components";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 
@@ -24,16 +24,13 @@ function App() {
     { className: "App" },
     // $(Navbar),
 
+    null,
     $(
-      Router,
-      null,
-      $(
-        Link,
-        { to: "#", className: "open-bars" },
-        $(FaIcons.FaBars, { onClick: () => toggleSidebar() })
-      ),
-      $(Sidebar, { sidebar, toggleSidebar })
+      Link,
+      { to: "#", className: "open-bars" },
+      $(FaIcons.FaBars, { onClick: () => toggleSidebar() })
     ),
+    $(Sidebar, { sidebar, toggleSidebar }),
     $(Components, { hideSidebar })
   );
 }
