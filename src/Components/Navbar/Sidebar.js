@@ -1,7 +1,7 @@
 import { createElement as $ } from "react";
 import { Container } from "./SidebarStyles";
-import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
+// import * as FaIcons from "react-icons/fa";
+// import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { SideBarData } from "./SidebarData";
 // icon context gives styles to all icons at once
@@ -19,32 +19,15 @@ const Sidebar = ({ sidebar, toggleSidebar }) => {
         {
           className: "nav-menu-items",
         },
-        $(
-          "li",
-          { className: "navbar-toggle" },
-          $(
-            Link,
-            {
-              to: "#",
-              className: "close-bars",
-              onClick: () => toggleSidebar(),
-            },
-            $(AiIcons.AiOutlineClose)
-          )
-        ),
         SideBarData.map((item, index) => {
           return $(
             "li",
             {
               key: index,
               className: item.cName,
+              onClick: () => toggleSidebar(),
             },
-            $(
-              Link,
-              { to: item.path, element: item.element },
-              item.icon,
-              $("span", null, item.title)
-            )
+            $(Link, { to: item.path }, item.icon, $("span", null, item.title))
           );
         })
       )
