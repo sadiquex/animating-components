@@ -1,6 +1,7 @@
 import { createElement as $ } from "react";
+import { Container, Heading, Description } from "../../ComponentStyles";
 import {
-  Container,
+  ButtonsDiv,
   Button1,
   Button2,
   Button3,
@@ -20,14 +21,20 @@ import {
   Button17,
 } from "./ButtonStyles";
 
-const Buttons = () => {
+const Buttons = ({ hideSidebar }) => {
   return $(
-    "div",
-    null,
+    Container,
+    { onClick: () => hideSidebar() },
+
+    $(Heading, null, "Beautiful Animated Buttons"),
     $(
-      Container,
+      Description,
       null,
-      // buttons are "a" elements
+      "These buttons are built using Vanilla Css. They are 100% reusable and modifiable components. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque beatae quiducimus saepe eos, omnis obcaecati consequuntur ab ipsam voluptatem cum repella asperiores. Quod nam tenetur doloribus eveniet voluptatum"
+    ),
+    $(
+      ButtonsDiv,
+      null,
       $(Button1, null, "Button 1"),
       $(Button2, null, "Button 2"),
       $(Button3, null, "Button 3"),
@@ -39,13 +46,18 @@ const Buttons = () => {
       $(Button9, null, "Button 9"),
       $(Button10, null, "Button 10"),
       $(Button11, null, "Button 11"),
-      // $(Button12, null, $("div", null, $("a", { href: "#" }, $("span", null, "Button 12")))),
+      $(
+        Button12,
+        null
+        // $("div", null, $("a", { href: "#" }, $("span", null, "Button 12")))
+      ),
       $(Button13, null, "Button 13"),
       $(Button14, null, "Button 14"),
       $(Button15, null, $("span", null, "Button 15")),
       $(Button16, null, $("span", null, "Button 16")),
       $(Button17, null, $("span", null, "B"), $("a", null, "utton"))
     )
+    // buttons are "a" elements
   );
 };
 

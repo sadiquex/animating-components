@@ -1,5 +1,5 @@
 import { createElement as $ } from "react";
-import { ComponentsContainer } from "./ComponentsStyles";
+import styled from "styled-components";
 // different component files
 import Buttons from "./Components/Buttons/Buttons";
 import Menus from "./Components/Menus/Menus";
@@ -10,7 +10,7 @@ import Images from "./Components/Images/Images";
 
 const Components = ({ hideSidebar }) => {
   return $(
-    ComponentsContainer,
+    Wrapper,
     { onClick: () => hideSidebar() },
     $(Buttons),
     $(Menus),
@@ -22,3 +22,11 @@ const Components = ({ hideSidebar }) => {
 };
 
 export default Components;
+
+const Wrapper = styled.div`
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;

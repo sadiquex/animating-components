@@ -1,0 +1,5 @@
+the reason why the size of the components are small is because i did a css stuff in the globalstyles, i made the 
+font size: 62.5%
+this reset is to make i rem equal 10px since by default it is 16px and 62.5% of that is 10px
+
+

@@ -1,15 +1,19 @@
 import styled from "styled-components";
+import { Container, Heading, Description } from "../../ComponentStyles";
 
-export const Container = styled.div`
-  display: flex;
+export const LoadersDiv = styled(Container)`
+  /* display: flex; */
   /* flex-direction: column; */
-  align-items: center;
-  flex-wrap: wrap;
+  /* align-items: center; */
+  /* flex-wrap: wrap; */
   border: 2px solid red;
   background: #264653;
   gap: 100px;
-  padding: 40px;
+  padding: 20px 0;
   overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex: 1;
 `;
 
 export const Loader1 = styled.div`

@@ -7,6 +7,17 @@ export const Container = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
+  min-width: 1100px;
+`;
+
+export const CardsDiv = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
 `;
 
 export const OriginalCard = styled.div``;

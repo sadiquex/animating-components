@@ -1,17 +1,16 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const ButtonsDiv = styled.div`
   display: flex;
-  justify-content: space-around;
+  flex: 0;
   align-items: center;
+  justify-content: space-around;
   flex-wrap: wrap;
-  border: 2px solid red;
-  gap: 20px;
+  gap: 10px;
+  width: 100%;
 `;
+
 export const OriginalButton = styled.a`
-  padding: 3rem 8rem;
-  cursor: pointer;
-  border: 2px solid #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,6 +18,11 @@ export const OriginalButton = styled.a`
   transition: all 0.6s;
   overflow: hidden;
   cursor: pointer;
+  font-size: 16px;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  padding: 0.875rem 1.5rem;
+  border: 2px solid #000;
 `;
 
 export const Button1 = styled(OriginalButton)`
@@ -618,19 +622,19 @@ export const Button16 = styled(OriginalButton)`
   }
 `;
 export const Button17 = styled.div`
-  padding: 3rem 8rem;
-  cursor: pointer;
-  border: 2px solid #000;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   transition: all 0.6s;
   overflow: hidden;
   cursor: pointer;
-
   position: relative;
   overflow: visible;
+  font-size: 16px;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  padding: 0.875rem 1.5rem;
+  border: 2px solid #000;
 
   a {
     &:before {

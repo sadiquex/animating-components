@@ -38,12 +38,11 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 html {
-	font-size: 62.5%;
+	/* font-size: 62.5%; */
 }
 body {
 	line-height: 1;
 	font-family: 'Ubuntu';
-	font-size: 62.5%;
 
 	::-webkit-scrollbar {
     width: 1rem;

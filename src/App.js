@@ -48,16 +48,28 @@ function App() {
       $(Route, {
         path: "/buttons",
         exact: true,
-        element: $(ButtonsPage),
+        element: $(ButtonsPage, { hideSidebar }),
       }),
       $(Route, {
         path: "/cards",
         exact: true,
-        element: $(CardsPage),
+        element: $(CardsPage, { hideSidebar }),
       }),
-      $(Route, { path: "/images", exact: true, element: $(ImagesPage) }),
-      $(Route, { path: "/loaders", exact: true, element: $(LoadersPage) }),
-      $(Route, { path: "/menus", exact: true, element: $(MenusPage) })
+      $(Route, {
+        path: "/images",
+        exact: true,
+        element: $(ImagesPage, { hideSidebar }),
+      }),
+      $(Route, {
+        path: "/loaders",
+        exact: true,
+        element: $(LoadersPage, { hideSidebar }),
+      }),
+      $(Route, {
+        path: "/menus",
+        exact: true,
+        element: $(MenusPage, { hideSidebar }),
+      })
     )
   );
 }
@@ -67,18 +79,25 @@ export default App;
 const Container = styled.div`
   /* open bars */
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0;
 `;
 
 const Menu = styled.div`
   font-size: 2rem;
   position: fixed;
-  left: 30px;
+  right: 30px;
   top: 30px;
   z-index: 10;
   cursor: pointer;
-  padding: 20px;
-  background: #002a32;
-  color: #fff;
+  padding: 0.875rem 1.5rem;
+  background: transparent;
+  border: 2px solid #002a32;
+  color: #002a32;
   text-decoration: none;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  border-radius: 0.25rem;
 `;

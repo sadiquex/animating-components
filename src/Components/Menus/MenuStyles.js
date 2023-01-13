@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
 export const Heading = styled.p`
-  font-size: 2rem;
+  /* font-size: 2rem; */
 `;
 
 export const Container = styled.div`
   border: 2px solid blue;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  width: 100%;
+  /* display: flex;
+  flex: 0 auto;
   justify-content: space-between;
-  gap: 20px;
+  align-items: center; */
+  /* gap: 20px; */
 `;
 
 export const OriginalMenu = styled.div`
