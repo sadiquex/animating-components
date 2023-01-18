@@ -5,23 +5,22 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  /* align-items: center; */
   flex-direction: column;
   flex-wrap: wrap;
-  border: 2px solid red;
   gap: 20px;
-  flex: 1;
+  padding: 2rem 0.5rem;
 `;
 
 export const Heading = styled.p`
-  text-align: center;
+  text-align: left;
   font-weight: 600;
   font-size: 24px;
   flex: 1;
   width: 100%;
 `;
 export const Description = styled.p`
-  color: blue;
-  flex: 1;
-  width: 100%;
+  /* flex: 1; */
+  /* width: 100%; */
+  text-align: left;
 `;

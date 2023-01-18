@@ -30,7 +30,7 @@ const Buttons = ({ hideSidebar }) => {
     $(
       Description,
       null,
-      "These buttons are built using Vanilla Css. They are 100% reusable and modifiable components. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque beatae quiducimus saepe eos, omnis obcaecati consequuntur ab ipsam voluptatem cum repella asperiores. Quod nam tenetur doloribus eveniet voluptatum"
+      "All these buttons are designed and built using lightweight vanilla Css. They are 100% reusable and modifiable components. "
     ),
     $(
       ButtonsDiv,

@@ -3,11 +3,18 @@ import styled from "styled-components";
 export const ButtonsDiv = styled.div`
   display: flex;
   flex: 0;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 10px;
+  column-gap: 150px;
+  row-gap: 30px;
   width: 100%;
+
+  @media screen and (max-width: 600px) {
+    column-gap: 50px;
+    row-gap: 30px;
+    justify-content: space-around;
+  }
 `;
 
 export const OriginalButton = styled.a`
@@ -23,6 +30,8 @@ export const OriginalButton = styled.a`
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
   padding: 0.875rem 1.5rem;
   border: 2px solid #000;
+  /* they are here to position the buttons well */
+  width: 100px;
 `;
 
 export const Button1 = styled(OriginalButton)`
@@ -117,6 +126,7 @@ export const Button3 = styled(OriginalButton)`
 export const Button4 = styled(OriginalButton)`
   color: #e1332d;
   border: 4px solid #e1332d;
+  white-space: nowrap;
 
   &:hover {
     letter-spacing: 10px;

@@ -10,6 +10,16 @@ export const Container = styled.div`
   gap: 10px;
 `;
 
+export const TextDiv = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+`;
+
 export const OriginalText = styled.div`
   color: blue;
   font-size: 4rem;

@@ -3,17 +3,16 @@ import Components from "./Components";
 // import Navbar from "./Components/Navbar/Navbar";
 import Sidebar from "./Components/Navbar/Sidebar";
 import styled from "styled-components";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
-// import * as FaIcons from "react-icons/fa";
-
 import ButtonsPage from "./pages/ButtonsPage";
 import CardsPage from "./pages/CardsPage";
 import ImagesPage from "./pages/ImagesPage";
 import LoadersPage from "./pages/LoadersPage";
 import MenusPage from "./pages/MenusPage";
+import AboutPage from "./pages/AboutPage";
 
-function App() {
+const App = () => {
   const [sidebar, setSidebar] = useState(false);
 
   const toggleSidebar = () => {
@@ -42,6 +41,11 @@ function App() {
       { hideSidebar },
       $(Route, {
         path: "/",
+        exact: true,
+        element: $(AboutPage, { hideSidebar }),
+      }),
+      $(Route, {
+        path: "/components",
         exact: true,
         element: $(Components, { hideSidebar }),
       }),
@@ -72,7 +76,7 @@ function App() {
       })
     )
   );
-}
+};
 
 export default App;
 
@@ -83,21 +87,28 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex: 0;
 `;
 
 const Menu = styled.div`
-  font-size: 2rem;
+  font-size: 1.6rem;
   position: fixed;
-  right: 30px;
-  top: 30px;
-  z-index: 10;
+  /* right: 30px; */
+  /* top: 30px; */
+  right: 5%;
+  top: 2%;
+  /* z-index: 10; */
   cursor: pointer;
-  padding: 0.875rem 1.5rem;
+  padding: 10px 15px;
   background: transparent;
   border: 2px solid #002a32;
   color: #002a32;
   text-decoration: none;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
   border-radius: 0.25rem;
+  transition: all 0.4s ease;
+
+  &:hover {
+    background: #002a32;
+    color: #fff;
+  }
 `;

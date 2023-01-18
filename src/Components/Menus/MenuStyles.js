@@ -7,17 +7,12 @@ export const Heading = styled.p`
 export const Container = styled.div`
   border: 2px solid blue;
   width: 100%;
-  /* display: flex;
-  flex: 0 auto;
-  justify-content: space-between;
-  align-items: center; */
-  /* gap: 20px; */
 `;
 
 export const OriginalMenu = styled.div`
   padding: 20px 10px;
   margin: 20px 0;
-  background: red;
+  background: #351435;
 
   ul {
     padding: 0;
@@ -185,4 +180,12 @@ export const Menu3 = styled(OriginalMenu)`
     }
   }
 `;
-export const Menu4 = styled(OriginalMenu)``;
+export const Menu4 = styled(OriginalMenu)`
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+`;

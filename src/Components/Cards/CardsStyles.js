@@ -1,13 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  border: 2px solid red;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  min-width: 1100px;
+  border: 2px solid blue;
+  width: 100%;
 `;
 
 export const CardsDiv = styled.div`
@@ -20,12 +15,14 @@ export const CardsDiv = styled.div`
   width: 100%;
 `;
 
-export const OriginalCard = styled.div``;
+export const OriginalCard = styled.div`
+  min-height: 320px;
+`;
 
 export const Card1 = styled(OriginalCard)`
   position: relative;
   width: 320px;
-  padding: 40px;
+  padding: 20px;
   background: #fff;
   overflow: hidden;
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
