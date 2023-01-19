@@ -6,10 +6,20 @@ import { Link } from "react-router-dom";
 import { SideBarData } from "./SidebarData";
 // icon context gives styles to all icons at once
 
+import { motion } from "framer-motion";
+
 const Sidebar = ({ sidebar, toggleSidebar }) => {
   return $(
     Container,
-    null,
+
+    {
+      initial: {
+        opacity: 0,
+      },
+      animate: {
+        opacity: 1,
+      },
+    },
     $(
       "nav",
       { className: sidebar ? "nav-menu active" : "nav-menu" },
@@ -21,8 +31,9 @@ const Sidebar = ({ sidebar, toggleSidebar }) => {
         },
         SideBarData.map((item, index) => {
           return $(
-            "li",
+            motion.li,
             {
+              whileHover: {},
               key: index,
               className: item.cName,
               onClick: () => toggleSidebar(),

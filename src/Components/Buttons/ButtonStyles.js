@@ -15,6 +15,9 @@ export const ButtonsDiv = styled.div`
     row-gap: 30px;
     justify-content: space-around;
   }
+  @media screen and (max-width: 480px) {
+    column-gap: 0;
+  }
 `;
 
 export const OriginalButton = styled.a`
@@ -32,6 +35,10 @@ export const OriginalButton = styled.a`
   border: 2px solid #000;
   /* they are here to position the buttons well */
   width: 100px;
+
+  @media screen and (max-width: 480px) {
+    /* width: 70px; */
+  }
 `;
 
 export const Button1 = styled(OriginalButton)`

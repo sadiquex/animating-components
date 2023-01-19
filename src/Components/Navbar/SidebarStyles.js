@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   font-size: 20px;
   position: relative;
+  z-index: 9000;
   .menu-bars {
-    /* z-index: 9000; */
     color: #fff;
     padding: 30px;
     position: sticky;
