@@ -3,7 +3,7 @@ import Components from "./Components";
 // import Navbar from "./Components/Navbar/Navbar";
 import Sidebar from "./Components/Navbar/Sidebar";
 import styled from "styled-components";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import ButtonsPage from "./pages/ButtonsPage";
 import CardsPage from "./pages/CardsPage";

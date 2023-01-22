@@ -4,15 +4,33 @@ export const Heading = styled.p`
   /* font-size: 2rem; */
 `;
 
-export const Container = styled.div`
-  border: 2px solid blue;
-  width: 100%;
+export const MenusDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  border: 2px solid red;
+  display: flex;
+
+  /* width: 100%; */
+  /* overflow-x: hidden; */
+  padding: 1rem 0;
 `;
 
 export const OriginalMenu = styled.div`
   padding: 20px 10px;
   margin: 20px 0;
   background: #351435;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 480px) {
+    padding: 15px 5px;
+    padding: 15px 0;
+    flex-wrap: nowrap;
+  }
 
   ul {
     padding: 0;
@@ -22,6 +40,14 @@ export const OriginalMenu = styled.div`
     justify-content: space-between;
     flex: 1;
     padding: 0 20px;
+    /* width: 40px; */
+
+    @media screen and (max-width: 480px) {
+      /* font-size: 70%; */
+      justify-content: space-around;
+      padding: 15px 0;
+      /* flex-wrap: nowrap; */
+    }
   }
 
   li {
@@ -72,6 +98,14 @@ export const Menu1 = styled(OriginalMenu)`
 
 export const Menu2 = styled(OriginalMenu)`
   background: #262626;
+  /* background: orangered; */
+
+  ul {
+    @media screen and (max-width: 480px) {
+      padding: 0;
+    }
+  }
+
   a {
     text-transform: uppercase;
     text-decoration: none;
@@ -137,6 +171,10 @@ export const Menu3 = styled(OriginalMenu)`
     flex-direction: column;
     gap: 30px;
     align-items: center;
+
+    @media screen and (max-width: 480px) {
+      font-size: 2rem;
+    }
   }
   li {
     display: block;

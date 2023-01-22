@@ -10,17 +10,17 @@ export const Container = styled.div`
   flex-wrap: wrap;
   gap: 20px;
   padding: 2rem 0.5rem;
+  overflow-x: scroll;
+  /* overflow-x: hidden; */
 `;
 
 export const Heading = styled.p`
   text-align: left;
   font-weight: 600;
   font-size: 24px;
-  flex: 1;
-  width: 100%;
 `;
 export const Description = styled.p`
-  /* flex: 1; */
-  /* width: 100%; */
+  width: 100%;
   text-align: left;
+  white-space: nowrap;
 `;

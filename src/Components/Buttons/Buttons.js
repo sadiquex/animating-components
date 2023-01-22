@@ -24,7 +24,7 @@ import {
 const Buttons = ({ hideSidebar }) => {
   return $(
     Container,
-    { onClick: () => hideSidebar() },
+    // { onClick: () => hideSidebar() },
 
     $(Heading, null, "Beautiful Animated Buttons"),
     $(
@@ -34,7 +34,8 @@ const Buttons = ({ hideSidebar }) => {
     ),
     $(
       ButtonsDiv,
-      null,
+      { onClick: () => hideSidebar() },
+
       $(Button1, null, "Button 1"),
       $(Button2, null, "Button 2"),
       $(Button3, null, "Button 3"),
