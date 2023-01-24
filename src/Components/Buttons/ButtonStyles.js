@@ -1,23 +1,12 @@
 import styled from "styled-components";
 
 export const ButtonsDiv = styled.div`
-  display: flex;
-  flex: 0;
-  align-items: baseline;
-  justify-content: space-around;
-  flex-wrap: wrap;
   column-gap: 150px;
   row-gap: 30px;
   width: 100%;
-
-  @media screen and (max-width: 600px) {
-    column-gap: 50px;
-    row-gap: 30px;
-    justify-content: space-around;
-  }
-  @media screen and (max-width: 480px) {
-    column-gap: 0;
-  }
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 `;
 
 export const OriginalButton = styled.a`
@@ -34,7 +23,8 @@ export const OriginalButton = styled.a`
   padding: 0.875rem 1.5rem;
   border: 2px solid #000;
   /* they are here to position the buttons well */
-  width: 100px;
+  /* width: 100px; */
+  white-space: nowrap;
 
   @media screen and (max-width: 480px) {
     /* width: 70px; */

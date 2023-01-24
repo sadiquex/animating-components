@@ -9,8 +9,10 @@ export const Container = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 2rem 0.5rem;
-  overflow-x: scroll;
+  /* padding: 2rem 0.5rem; */
+  padding: 2rem 0rem;
+  /* overflow-x: scroll; */
+  /* border: 2px solid red; */
   /* overflow-x: hidden; */
 `;
 
@@ -20,7 +22,7 @@ export const Heading = styled.p`
   font-size: 24px;
 `;
 export const Description = styled.p`
-  width: 100%;
+  /* width: 100%; */
   text-align: left;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 `;

@@ -39,4 +39,10 @@ export const SideBarData = [
     icon: <AiIcons.AiFillHome />,
     cName: "nav-text",
   },
+  {
+    title: "Grid Cards",
+    path: "/grid",
+    icon: <AiIcons.AiFillHome />,
+    cName: "nav-text",
+  },
 ];

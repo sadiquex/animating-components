@@ -7,6 +7,7 @@ import Texts from "./Components/Texts/Texts";
 import Cards from "./Components/Cards/Cards";
 import Loaders from "./Components/Loaders/Loaders";
 import Images from "./Components/Images/Images";
+import Grid from "./Components/Grid/Grid";
 
 const Components = ({ hideSidebar }) => {
   return $(
@@ -17,7 +18,8 @@ const Components = ({ hideSidebar }) => {
     $(Cards),
     $(Loaders),
     $(Texts),
-    $(Images)
+    $(Images),
+    $(Grid)
   );
 };
 

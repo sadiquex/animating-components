@@ -11,6 +11,7 @@ import ImagesPage from "./pages/ImagesPage";
 import LoadersPage from "./pages/LoadersPage";
 import MenusPage from "./pages/MenusPage";
 import AboutPage from "./pages/AboutPage";
+import GridPage from "./pages/GridPage";
 
 const App = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -73,6 +74,11 @@ const App = () => {
         path: "/menus",
         exact: true,
         element: $(MenusPage, { hideSidebar }),
+      }),
+      $(Route, {
+        path: "/grid",
+        exact: true,
+        element: $(GridPage, { hideSidebar }),
       })
     )
   );

@@ -1,22 +1,15 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  border: 2px solid blue;
-  width: 100%;
-`;
-
 export const CardsDiv = styled.div`
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 10px;
-  width: 100%;
+  /* border: 2px solid red; */
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-auto-rows: 320px; //also specifies height
 `;
 
 export const OriginalCard = styled.div`
-  min-height: 320px;
+  /* min-height: 320px; */
 `;
 
 export const Card1 = styled(OriginalCard)`

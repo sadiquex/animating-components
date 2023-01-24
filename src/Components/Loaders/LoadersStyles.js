@@ -9,7 +9,7 @@ export const LoadersDiv = styled(Container)`
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 10px;
-  width: 100%;
+  /* width: 100%; */
   overflow-x: hidden;
   padding: 1rem 0;
 `;
