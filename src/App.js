@@ -12,7 +12,7 @@ import LoadersPage from "./pages/LoadersPage";
 import MenusPage from "./pages/MenusPage";
 import AboutPage from "./pages/AboutPage";
 import GridPage from "./pages/GridPage";
-
+// facebook Navbar
 const App = () => {
   const [sidebar, setSidebar] = useState(false);
 
@@ -101,7 +101,7 @@ const Menu = styled.div`
   /* right: 30px; */
   /* top: 30px; */
   right: 5%;
-  top: 2%;
+  top: 10%;
   /* z-index: 10; */
   cursor: pointer;
   padding: 10px 15px;

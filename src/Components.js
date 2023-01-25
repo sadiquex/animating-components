@@ -8,11 +8,14 @@ import Cards from "./Components/Cards/Cards";
 import Loaders from "./Components/Loaders/Loaders";
 import Images from "./Components/Images/Images";
 import Grid from "./Components/Grid/Grid";
+// facebook navbar
+import Navbar from "./Components/FbNavbar/FbNavbar";
 
 const Components = ({ hideSidebar }) => {
   return $(
     Wrapper,
     { onClick: () => hideSidebar() },
+    $(Navbar),
     $(Buttons),
     $(Menus),
     $(Cards),
@@ -30,7 +33,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  align-items: center;
+  /* align-items: center; */
   gap: 30px;
   padding: 1rem 0.5rem;
 `;
