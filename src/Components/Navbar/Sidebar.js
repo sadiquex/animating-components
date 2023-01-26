@@ -1,46 +1,45 @@
 import { createElement as $ } from "react";
 import { Container } from "./SidebarStyles";
-// import * as FaIcons from "react-icons/fa";
-// import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { SideBarData } from "./SidebarData";
-// icon context gives styles to all icons at once
-
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Sidebar = ({ sidebar, toggleSidebar }) => {
   return $(
     Container,
-
-    {
-      initial: {
-        opacity: 0,
-      },
-      animate: {
-        opacity: 1,
-      },
-    },
+    null,
     $(
-      "nav",
-      { className: sidebar ? "nav-menu active" : "nav-menu" },
-
+      AnimatePresence,
+      null,
       $(
-        "ul",
+        "nav",
         {
-          className: "nav-menu-items",
+          className: sidebar ? "nav-menu active" : "nav-menu",
+
+          initial: { opacity: 0 },
+          animate: { opacity: 1 },
+          exit: { opacity: 0 },
+          transition: { duration: "2s", type: "spring" },
         },
-        SideBarData.map((item, index) => {
-          return $(
-            motion.li,
-            {
-              whileHover: {},
-              key: index,
-              className: item.cName,
-              onClick: () => toggleSidebar(),
-            },
-            $(Link, { to: item.path }, item.icon, $("span", null, item.title))
-          );
-        })
+
+        $(
+          "ul",
+          {
+            className: "nav-menu-items",
+          },
+          SideBarData.map((item, index) => {
+            return $(
+              motion.li,
+              {
+                whileHover: { scale: 1.09 },
+                key: index,
+                className: item.cName,
+                onClick: () => toggleSidebar(),
+              },
+              $(Link, { to: item.path }, item.icon, $("span", null, item.title))
+            );
+          })
+        )
       )
     )
   );

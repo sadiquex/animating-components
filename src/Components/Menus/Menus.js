@@ -5,8 +5,7 @@ import { Container, Heading, Description } from "../../ComponentStyles";
 const Menus = ({ hideSidebar }) => {
   return $(
     Container,
-    // { onClick: () => hideSidebar() },
-
+    null,
     $(Heading, null, "Menu Components"),
     $(Description, null, "These are the menus"),
     $(

@@ -111,33 +111,39 @@ export const PhotoGrid = styled.div`
 // !!!!!!!!!!!!
 // animated layout
 export const AnimatedGrid = styled.div`
+  // variables
+  --stagger-delay: 350ms;
+
   .animated-grid {
     height: 85vh;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 20px;
 
-    @media screen and (min-width: 600px) {
-      display: grid;
-      gap: 1rem;
+    grid-auto-rows: 240px;
 
+    /* explicit grid */
+    grid-template-areas:
+      "a b c d"
+      "l 0 0 e"
+      "k 0 0 f"
+      "j i h g";
+
+    grid-template-rows: repeat(4, 25%);
+    /* grid-template-columns: 240px auto auto 240px; */
+    grid-template-columns: repeat(4, minmax(240px, 1fr));
+
+    @media screen and (max-width: 768px) {
       /* explicit grid */
       grid-template-areas:
-        "a b c d"
-        "k 0 0 e"
-        "l 0 0 f"
-        "j i h g";
-
-      grid-auto-rows: 240px;
-
-      grid-template-rows: repeat(4, 25%);
-      /* grid-template-columns: 240px auto auto 240px; */
-      grid-template-columns: repeat(4, minmax(240px, 1fr));
+        "a b"
+        "c d"
+        "0 0"
+        "e f"
+        "g h"
+        "i j"
+        "k l";
+      grid-template-columns: repeat(2, minmax(240px, 1fr));
     }
-  }
-
-  .card:nth-child(1) {
-    grid-area: a;
   }
 
   /* cards */
@@ -145,6 +151,7 @@ export const AnimatedGrid = styled.div`
     background-color: rgb(36, 243, 147);
     animation: cardEntrance 700ms ease-out;
     animation-fill-mode: backwards;
+    font-size: 40px;
   }
 
   /* animation */
@@ -208,5 +215,57 @@ export const AnimatedGrid = styled.div`
   .card:nth-child(12) {
     grid-area: l;
     animation-delay: calc(12 * var(--stagger-delay));
+  }
+
+  /* media queries */
+  @media screen and (min-width: 768px) {
+    .card:nth-child(1) {
+      grid-area: a;
+      animation-delay: calc(1 * var(--stagger-delay));
+    }
+    .card:nth-child(2) {
+      grid-area: b;
+      animation-delay: calc(3 * var(--stagger-delay));
+    }
+    .card:nth-child(3) {
+      grid-area: c;
+      animation-delay: calc(4 * var(--stagger-delay));
+    }
+    .card:nth-child(4) {
+      grid-area: d;
+      animation-delay: calc(2 * var(--stagger-delay));
+    }
+    .card:nth-child(5) {
+      grid-area: e;
+      animation-delay: calc(5 * var(--stagger-delay));
+    }
+    .card:nth-child(6) {
+      grid-area: f;
+      animation-delay: calc(7 * var(--stagger-delay));
+    }
+    .card:nth-child(7) {
+      grid-area: g;
+      animation-delay: calc(8 * var(--stagger-delay));
+    }
+    .card:nth-child(8) {
+      grid-area: h;
+      animation-delay: calc(6 * var(--stagger-delay));
+    }
+    .card:nth-child(9) {
+      grid-area: i;
+      animation-delay: calc(9 * var(--stagger-delay));
+    }
+    .card:nth-child(10) {
+      grid-area: j;
+      animation-delay: calc(11 * var(--stagger-delay));
+    }
+    .card:nth-child(11) {
+      grid-area: k;
+      animation-delay: calc(12 * var(--stagger-delay));
+    }
+    .card:nth-child(12) {
+      grid-area: l;
+      animation-delay: calc(10 * var(--stagger-delay));
+    }
   }
 `;
