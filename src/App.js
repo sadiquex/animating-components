@@ -4,6 +4,7 @@ import Sidebar from "./Components/Navbar/Sidebar";
 import styled from "styled-components";
 import { useState } from "react";
 import AnimatedRoutes from "./AnimatedRoutes";
+import { motion } from "framer-motion";
 
 // facebook Navbar
 const App = () => {
@@ -22,7 +23,11 @@ const App = () => {
     null,
     $(
       Menu,
-      { to: "#", className: "menu", onClick: () => toggleSidebar() },
+      {
+        to: "#",
+        className: "menu",
+        onClick: () => toggleSidebar(),
+      },
       "MENU"
       // $(FaIcons.FaBars, )
     ),
@@ -42,14 +47,12 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const Menu = styled.div`
+const Menu = styled(motion.div)`
+  z-index: 1000;
   font-size: 1.6rem;
   position: fixed;
-  /* right: 30px; */
-  /* top: 30px; */
   right: 5%;
   top: 10%;
-  /* z-index: 10; */
   cursor: pointer;
   padding: 10px 15px;
   background: transparent;

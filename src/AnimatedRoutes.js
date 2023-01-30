@@ -12,7 +12,6 @@ import MenusPage from "./pages/MenusPage";
 import AboutPage from "./pages/AboutPage";
 import GridPage from "./pages/GridPage";
 
-// framer motion imports
 import { AnimatePresence } from "framer-motion";
 
 const AnimatedRoutes = () => {

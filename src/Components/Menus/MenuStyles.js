@@ -227,3 +227,55 @@ export const Menu4 = styled(OriginalMenu)`
     color: #fff;
   }
 `;
+
+export const Menu5 = styled.div`
+  height: 600px;
+  width: ${({ open }) => (open ? "400px" : "10%")};
+  border: 2px solid green;
+  background: #283618;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
+  font-size: 20px;
+`;
+
+export const Menu5top = styled.div`
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid blue;
+  color: #fff;
+
+  .logo {
+    /* display: ${({ open }) => (open ? "block" : "none")}; */
+    color: ${({ open }) => (open ? "blue" : "red")};
+  }
+  .menu-icon {
+  }
+`;
+
+export const Menu5ul = styled.ul`
+  border: 2px solid orange;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-evenly;
+  padding: 0px 20px;
+
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+
+      p {
+        display: ${({ open }) => (open ? "block" : "none")};
+      }
+    }
+  }
+`;
+
+export const Menu5Down = styled.div`
+  background: #eee;
+`;
